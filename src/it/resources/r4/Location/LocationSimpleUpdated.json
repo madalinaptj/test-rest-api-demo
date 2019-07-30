@@ -1,0 +1,16 @@
+{
+	"id": "example",
+	"resourceType": "Location",
+	"name": "Waiting Room 1",
+	"identifier": [
+		{
+			"value": "B1-S.F2.1.00"
+		}
+	],
+	"operationalStatus": {
+		"system": "http://hl7.org/fhir/v2/0116",
+		"code": "U",
+		"display": "Unoccupied Status"
+	},
+	"status": "active"
+}

@@ -1,0 +1,84 @@
+{
+	"resourceType": "Patient",
+	"id": "example",
+	"name": [
+		{
+			"given": [
+				"Julius"
+			],
+			"text": "Julius Aalto",
+			"use": "usual",
+			"family": "Aalto"
+		}
+	],
+	"photo": [
+		{
+			"url": "https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-business-man-399587fe24739d5a-512x512.png"
+		}
+	],
+	"contact": [
+		{
+			"name": {
+				"given": [
+					"Sarah"
+				],
+				"use": "usual",
+				"family": "Abels"
+			},
+			"relationship": [
+				{
+					"coding": [
+						{
+							"system": "http://hl7.org/fhir/v2/0131",
+							"code": "C"
+						}
+					]
+				}
+			],
+			"telecom": [
+				{
+					"system": "phone",
+					"use": "mobile",
+					"value": "0690383372"
+				}
+			]
+		}
+	],
+	"birthDate": "1985-11-29",
+	"telecom": [
+		{
+			"system": "phone",
+			"use": "mobile",
+			"value": "0648352638"
+		},
+		{
+			"system": "email",
+			"use": "home",
+			"value": "JuliusAalto@gmail.com"
+		}
+	],
+	"address": [
+		{
+			"city": "Amsterdam",
+			"line": [
+				"Van Egmondkade 23"
+			],
+			"country": "NLD",
+			"postalCode": "1024 RJ",
+			"use": "home"
+		}
+	],
+	"gender": "male",
+	"active": true,
+	"deceasedBoolean": false,
+	"text": {
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> <div class=\"hapiHeaderText\">Julius <b>AALTO </b> </div> <table class=\"hapiPropertyTable\"> <tbody> <tr> <td>Address</td> <td> <span>Van Egmondkade 23 </span> <br/> <span>Amsterdam </span> <span>NLD </span> </td> </tr> <tr> <td>Date of birth</td> <td> <span>29 November 1985</span> </td> </tr> </tbody> </table> </div>",
+		"status": "generated"
+	},
+	"extension": [
+		{
+			"url": "http://example.org/fhir/SearchParameter/onboarding-status",
+			"valueString": "Not Enrolled"
+		}
+	]
+}

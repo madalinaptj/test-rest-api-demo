@@ -1,0 +1,123 @@
+{
+    "resourceType": "AllergyIntolerance",
+    "id": "301",
+    "meta": {
+        "versionId": "4",
+        "lastUpdated": "2018-06-01T12:42:45.321+02:00"
+    },
+    "identifier": [
+        {
+            "id": "304",
+            "type": {
+                "id": "303"
+            },
+            "system": "http://acme.com/ids/patients/risks",
+            "value": "49476534",
+            "period": {
+                 "start": "2018",
+                 "end": "2019"   
+            }
+        }
+    ],
+    "clinicalStatus": "active",
+    "verificationStatus": "unconfirmed",
+    "type": "allergy",
+    "category": [
+        "food",
+		"biologic",
+		"environment"
+    ],
+    "criticality": "high",
+    "patient": 
+    	{
+    		"reference": "Patient/example"
+  		},
+    "code": {
+        "id": "299",
+        "coding": [
+            {
+                "id": "300",
+                "system": "http://snomed.info/sct",
+                "code": "227493005",
+                "display": "Cashew nuts",
+                "userSelected": false
+            }
+        ]
+    },
+    "onsetDateTime": "2016-02-19T09:30:35+01:00",
+    "note": [
+        {
+            "text": "The criticality is high becasue of the observed anaphylactic reaction when challenged with cashew extract."
+        }
+    ],
+    "reaction": [
+        {
+            "substance": {
+                "id": "308",
+                "coding": [
+                    {
+                        "id": "309",
+                        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                        "code": "1160593",
+                        "display": "cashew nut allergenic extract Injectable Product",
+                        "userSelected": false
+                    }
+                ]
+            },
+            "manifestation": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "39579001",
+                            "display": "Anaphylactic reaction",
+                            "userSelected": false
+                        }
+                    ]
+                }
+            ],
+            "description": "Challenge Protocol. Severe reaction to subcutaneous cashew extract. Epinephrine administered",
+            "onset": "2012-06-12T00:00:00+02:00",
+            "severity": "severe",
+            "exposureRoute": {
+                "id": "306",
+                "coding": [
+                    {
+                        "id": "307",
+                        "system": "http://snomed.info/sct",
+                        "code": "34206005",
+                        "display": "Subcutaneous route",
+                        "userSelected": false
+                    }
+                ]
+            }
+        },
+        {
+            "substance": {
+                "id": "314"
+            },
+            "manifestation": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://snomed.info/sct",
+                            "code": "64305001",
+                            "display": "Urticaria",
+                            "userSelected": false
+                        }
+                    ]
+                }
+            ],
+            "onset": "2004-01-01T00:00:00+01:00",
+            "severity": "moderate",
+            "exposureRoute": {
+                "id": "313"
+            },
+            "note": [
+                {
+                    "text": "The patient reports that the onset of urticaria was within 15 minutes of eating cashews."
+                }
+            ]
+        }
+    ]
+}

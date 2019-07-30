@@ -1,0 +1,20 @@
+{
+	"resourceType": "Organization",
+	"id": "example",
+	"name": "ED Augero",
+	"alias": [
+		"ED Augero"
+	],
+	"type": [
+		{
+			"coding": [
+				{
+					"system": "http://hl7.org/fhir/organization-type",
+					"code": "dept",
+					"display": "Hospital Department"
+				}
+			]
+		}
+	],
+	"active": true
+}
