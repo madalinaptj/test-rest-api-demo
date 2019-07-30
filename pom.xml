@@ -2,6 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.4.RELEASE</version>
+        <relativePath />
+        <!-- lookup parent from repository -->
+    </parent>
 
     <groupId>com.demo.apitest</groupId>
     <artifactId>test-rest-api-demo</artifactId>
@@ -42,6 +50,19 @@
             <artifactId>junit-platform-launcher</artifactId>
             <version>1.4.2</version>
         </dependency>
+        
+                <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-commons</artifactId>
+            <version>1.4.2</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>2.1.4.RELEASE</version>
+        </dependency>
 
     </dependencies>
 
@@ -75,6 +96,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
+                <version>3.0.0</version>
                 <executions>
              		<execution>
                          <id>add-integration-test-source-as-test-sources</id>
@@ -87,7 +109,7 @@
                          <configuration>
                              <sources>
                                  <source>src/it/java</source>
-                                 <source>src/it/helper</source>
+                                 <source>src/it/util</source>
                              </sources>
                          </configuration>
                      </execution>
@@ -107,6 +129,16 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.1.4.RELEASE</version>
+
+                <configuration>
+                    <executable>false</executable>
+                </configuration>
             </plugin>
         </plugins>
     </build>

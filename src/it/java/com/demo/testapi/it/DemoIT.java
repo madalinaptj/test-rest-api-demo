@@ -5,9 +5,13 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.demo.testapi.it.util.ApplicationContextConfig;
 
 import io.restassured.RestAssured;
 
+@SpringBootTest(classes = ApplicationContextConfig.class)
 public class DemoIT {
 
     @DisplayName("Test POST status code 201")
